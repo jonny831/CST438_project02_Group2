@@ -1,76 +1,102 @@
 package com.daclink.drew.sp22.cst438_project01_starter;
-
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.daclink.drew.sp22.cst438_project01_starter.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    public static final String EXTRA_USER_ID = "com.daclink.drew.sp22.cst438_project01_starter.EXTRA_USER_ID";
+
+    TextView userTextView;
+
+
+    String userName = null;
+    private Button logoutButton;
+    private Button searchBooksButton;
+    private Button userMenuBtn;
+    private Button wishlistBtn;
+    private Button bookLogBtn;
+
+    private int userID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        logoutButton = (Button) findViewById(R.id.logoutButton);
+        //viewBooksButton = (Button) findViewById(R.id.viewBooksButton);
+        userMenuBtn = (Button) findViewById(R.id.editUsersBtn);
 
-        setSupportActionBar(binding.toolbar);
+        searchBooksButton = (Button) findViewById(R.id.searchBooksButton);
+        userMenuBtn = (Button) findViewById(R.id.editUsersBtn);
+        wishlistBtn = findViewById(R.id.wishlistButton);
+        bookLogBtn = findViewById(R.id.bookLogButton);
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        Intent i = getIntent();
+        Boolean isAdmin = i.getBooleanExtra(LoginActivity.EXTRA_IS_ADMIN, false);
+        userID = i.getIntExtra(LoginActivity.EXTRA_USER_ID, -10);
 
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (isAdmin) {
+            userMenuBtn.setVisibility(View.VISIBLE);
+        } else {
+            userMenuBtn.setVisibility(View.INVISIBLE);
         }
 
-        return super.onOptionsItemSelected(item);
-    }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), UserSettingsActivity.class);
+                startActivity(intent);
+//                finish();
+            }
+        });
+
+
+
+        searchBooksButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ViewBooksActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        wishlistBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), WishlistActivity.class);
+                intent.putExtra(EXTRA_USER_ID, userID);
+                startActivity(intent);
+            }
+        });
+
+        bookLogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), BookLogActivity.class);
+                intent.putExtra(EXTRA_USER_ID, userID);
+                startActivity(intent);
+            }
+        });
+
+        userMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AdminActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
