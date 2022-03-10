@@ -3,7 +3,6 @@ package com.example.cst438_project2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
@@ -13,7 +12,7 @@ public class FrontEndController {
 
     @RequestMapping("/")
     String home(Model model){
-        return "home";
+        return "index";
     }
 
     @RequestMapping("/allUsers")
