@@ -7,8 +7,9 @@
 ![](https://i.imgur.com/KZ7MJIb.png)
 
 -TABLES
+![](https://i.imgur.com/g1VnNSi.png)
+![](https://i.imgur.com/hxu6X8C.png)
+![](https://i.imgur.com/NwSCAtm.png)
+![](https://i.imgur.com/0hbLd9r.png)
+![](https://i.imgur.com/YvlG8jb.png)
 
-![](https://i.imgur.com/DneHR2C.png)
-![](https://i.imgur.com/ti0TiZw.png)
-![](https://i.imgur.com/wKeWp2s.png)
-![](https://i.imgur.com/OASI23p.png)
