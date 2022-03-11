@@ -29,6 +29,16 @@ public class Api {
         return "saved";
     }
 
+    @PostMapping(path="/deleteUser")
+    public @ResponseBody String deleteUser (@RequestParam String name){
+        User user = new User();
+        if (user.getName().equals(name)) {
+            userRepository.delete(user);
+        }
+
+        return "deleted";
+    }
+
     @GetMapping(path="/findByName")
     public @ResponseBody
     List<User> findUserByName(@RequestParam(defaultValue = "Isai Molina") String name){

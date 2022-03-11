@@ -1,12 +1,22 @@
 package com.example.cst438_project2;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class UserList {
     @Id
     private Integer userId;
     private Integer listId;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public Integer getUserId() {
         return userId;
