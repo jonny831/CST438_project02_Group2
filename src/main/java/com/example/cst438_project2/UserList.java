@@ -9,6 +9,10 @@ public class UserList {
     private Integer userId;
     private Integer listId;
     private String name;
+    public Integer size = 0;
+
+    public UserList() {
+    }
 
     public String getName() {
         return name;
@@ -33,4 +37,5 @@ public class UserList {
     public void setListId(Integer listId) {
         this.listId = listId;
     }
+
 }

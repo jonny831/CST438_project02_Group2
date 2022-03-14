@@ -21,20 +21,25 @@ public class Api {
     @PostMapping(path="/addUser")
     public @ResponseBody String addUser (@RequestParam String name, @RequestParam String email){
         User user = new User();
+        UserList list = new UserList();
         user.setName(name);
         user.setEmail(email);
 
         userRepository.save(user);
-
+        list.size++;
         return "saved";
     }
 
     @PostMapping(path="/deleteUser")
     public @ResponseBody String deleteUser (@RequestParam String name){
         User user = new User();
-        if (user.getName().equals(name)) {
-            userRepository.delete(user);
+        UserList list = new UserList();
+        for (int i = 0; i < list.size; i++) {
+            if (user.getName().equals(name)) {
+                userRepository.delete(user);
+            }
         }
+
 
         return "deleted";
     }
