@@ -16,6 +16,7 @@ public class User {
     private String name;
     private String email;
 
+
     public Integer getId() {
         return id;
     }
@@ -39,4 +40,5 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
