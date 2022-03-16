@@ -12,6 +12,7 @@ public class Api {
 
     @Autowired
     private UserRepository userRepository;
+    private ItemRepository itemRepository;
 
     @GetMapping(path="/allUsers")
     public @ResponseBody Iterable<User> getAllUsers(){
@@ -48,5 +49,23 @@ public class Api {
     public @ResponseBody
     List<User> findUserByName(@RequestParam(defaultValue = "Isai Molina") String name){
         return userRepository.findUserByName(name);
+    }
+
+    @GetMapping(path="/addItem")
+    public @ResponseBody Iterable<Item> getAllItems(){
+        return itemRepository.findAll();
+    }
+
+    @PostMapping(path="/addItem")
+    public @ResponseBody String addItem (@RequestParam String itemName, @RequestParam String itemPrice, @RequestParam String itemQuantity){
+        Item item = new Item();
+        ItemList list = new ItemList();
+        item.setName(itemName);
+        item.setPrice(Double.valueOf(itemPrice));
+        item.setQuantity(Integer.valueOf(itemQuantity));
+
+        itemRepository.save(item);
+        list.size++;
+        return "saved";
     }
 }

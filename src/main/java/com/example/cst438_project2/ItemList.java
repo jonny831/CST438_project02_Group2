@@ -8,6 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class ItemList {
 
+    public Integer size = 0;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

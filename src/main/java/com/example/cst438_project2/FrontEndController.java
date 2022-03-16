@@ -27,4 +27,16 @@ public class FrontEndController {
         return "allUsers";
     }
 
+    @RequestMapping("/addItem")
+    String addItem(Model model){
+        String uri = BASE_URI + "addItem";
+        RestTemplate restTemplate = new RestTemplate();
+
+        Item[] items = restTemplate.getForObject(uri, Item[].class);
+
+        model.addAttribute("items", items);
+
+        return "addItem";
+    }
+
 }
