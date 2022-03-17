@@ -24,12 +24,14 @@ public class FrontEndController {
     String register(Model model){
         User user = new User();
         model.addAttribute("user", user);
+
         return "register";
     }
     @PostMapping("/register")
     String registerSubmit(@ModelAttribute("user") User user){
         userRepository.save(user);
-        return"index";
+
+        return"addItem";
     }
 
     @RequestMapping("/allUsers")
