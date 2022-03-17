@@ -29,7 +29,7 @@ public class FrontEndController {
     @PostMapping("/register")
     String registerSubmit(@ModelAttribute("user") User user){
         userRepository.save(user);
-        return"index";
+        return"addItem";
     }
 
     @RequestMapping("/allUsers")
