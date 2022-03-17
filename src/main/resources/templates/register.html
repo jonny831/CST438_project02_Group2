@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"/>
+    <link th:href="@{/css/main.css}" rel="stylesheet"/>
+
+
+</head>
+<body>
+<h1 class="p-5 d-flex justify-content-center">My Wishes</h1>
+
+<div class="d-flex justify-content-evenly align-items-center">
+
+    <div>
+        <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+            <span>Don't have an account? Register Here!</span><br><br>
+            <b>Name:</b> <input type="text" th:field="*{name}" placeholder="Enter Name" name="name">
+            <br>
+            <b>Email:</b> <input type="text" th:field="*{email}" placeholder="Enter Username" name="username">
+            <br>
+            <b>Password:</b> <input type="password" th:field="*{password}" placeholder="Enter Password" name="password">
+            <br>
+            <button class = "btn btn-primary">
+                Register
+            </button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
