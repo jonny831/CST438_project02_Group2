@@ -17,25 +17,19 @@
 
 <div class="d-flex justify-content-evenly align-items-center">
     <div>
-        <b>Email:</b> <input type="text" placeholder="Enter Email" name="email">
-        <br>
-        <b>Password:</b> <input type="password" placeholder="Enter Password" name="password">
-        <br>
-        <button class = "btn btn-primary">
-            Login!
-        </button>
+        <form action = "/login">
+            <button class = "btn btn-primary">
+                Login!
+            </button>
+        </form>
+
     </div>
     <div>
-        <span>Don't have an account? Register Here!</span><br><br>
-        <b>Name:</b> <input type="text" placeholder="Enter Name" name="name">
-        <br>
-        <b>Email:</b> <input type="text" placeholder="Enter Username" name="username">
-        <br>
-        <b>Password:</b> <input type="password" placeholder="Enter Password" name="password">
-        <br>
-        <button class = "btn btn-primary">
-            Register
-        </button>
+        <form action = "/register">
+            <button class = "btn btn-primary">
+                Register
+            </button>
+        </form>
     </div>
 </div>
 
