@@ -38,6 +38,7 @@ public class Api {
         for (int i = 0; i < list.size; i++) {
             if (user.getName().equals(name)) {
                 userRepository.delete(user);
+                list.size--;
             }
         }
 
