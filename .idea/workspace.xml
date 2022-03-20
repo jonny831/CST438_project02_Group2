@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="User can register and appears in DB&#10;,individual Login/Register pages created">
-
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CST438_Project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CST438_Project2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" afterDir="false" />
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,12 +85,13 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="Spring Boot.Cst438Project2Application" />
-      <item itemvalue="Docker.Dockerfile" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #2" />

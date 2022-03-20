@@ -45,6 +45,20 @@ public class Api {
 
         return "deleted";
     }
+    @PostMapping(path="/deleteItem")
+    public @ResponseBody String deleteItem (@RequestParam String name){
+        Item item = new Item();
+        ItemList itemList = new ItemList();
+        for (int i = 0; i < itemList.size; i++) {
+            if (item.getName().equals(name)) {
+                itemRepository.delete(item);
+                itemList.size--;
+            }
+        }
+
+
+        return "deleted Item";
+    }
 
     @GetMapping(path="/findByName")
     public @ResponseBody
