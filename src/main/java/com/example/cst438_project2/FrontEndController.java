@@ -16,7 +16,7 @@ public class FrontEndController {
     public static final String BASE_URI = "http://localhost:9090/api/";
 
     @RequestMapping("/")
-    String home(Model model){
+    String landingPage(Model model){
         return "index";
     }
 
@@ -31,8 +31,14 @@ public class FrontEndController {
     String registerSubmit(@ModelAttribute("user") User user){
         userRepository.save(user);
 
-        return"addItem";
+        return"index";
     }
+
+    @GetMapping("/login")
+    String login(Model model){
+        return "login";
+    }
+
 
     @RequestMapping("/allUsers")
     String allUsers(Model model){
@@ -44,6 +50,11 @@ public class FrontEndController {
         model.addAttribute("users", users);
 
         return "allUsers";
+    }
+
+    @RequestMapping("/home")
+    String home(Model model){
+        return "home";
     }
 
     @RequestMapping("/addItem")
