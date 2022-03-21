@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="User can register and appears in DB&#10;,individual Login/Register pages created">
-
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CST438_Project2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CST438_Project2.iml" afterDir="false" />
+    <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="Delete Item in API">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" afterDir="false" />
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="deleteItem" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,12 +80,13 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="Spring Boot.Cst438Project2Application" />
-      <item itemvalue="Docker.Dockerfile" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
@@ -137,7 +131,14 @@
       <updated>1647560436949</updated>
       <workItem from="1647560438145" duration="1502000" />
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Delete Item in API">
+      <created>1647740753574</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647740753574</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,11 +154,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="User can register and appears in DB&#10;individual Login/Register pages created" />
     <MESSAGE value="User can register and appears in DB&#10;,individual Login/Register pages created" />
-    <option name="LAST_COMMIT_MESSAGE" value="User can register and appears in DB&#10;,individual Login/Register pages created" />
+    <MESSAGE value="Delete Item in API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Item in API" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CST438_Project2$Cst438Project2Application.ic" NAME="Cst438Project2Application Coverage Results" MODIFIED="1647387918259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

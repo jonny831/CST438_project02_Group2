@@ -46,6 +46,7 @@ public class Api {
         return "deleted";
     }
 
+
     @GetMapping(path="/findByName")
     public @ResponseBody
     List<User> findUserByName(@RequestParam(defaultValue = "Isai Molina") String name){
@@ -68,5 +69,19 @@ public class Api {
         itemRepository.save(item);
         list.size++;
         return "saved";
+    }
+
+    @PostMapping(path="/deleteItem")
+    public @ResponseBody String deleteItem (@RequestParam String name){
+        Item item = new Item();
+        ItemList itemList = new ItemList();
+        for (int i = 0; i < itemList.size; i++) {
+            if (item.getName().equals(name)) {
+                itemRepository.delete(item);
+                itemList.size--;
+            }
+        }
+
+        return "deleted Item";
     }
 }
