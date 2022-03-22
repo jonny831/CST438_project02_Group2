@@ -17,17 +17,24 @@
 
 <div class="d-flex justify-content-evenly align-items-center">
     <div>
+        <form th:action="@{/login}" method="post">
+        <span>Login Here!</span><br><br>
+        <div th:if="${param.error}" class = "alert alert-error>">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}" class = "alert alert-success">
+            You have been logged out.
+        </div>
+
         <b>Email:</b> <input type="text" placeholder="Enter Email" name="email">
         <br>
         <b>Password:</b> <input type="password" placeholder="Enter Password" name="password">
         <br>
-        <form action = "/addItem">
-            <button class = "btn btn-primary">
+            <button type="submit" class = "btn btn-primary">
                 Login!
             </button>
         </form>
     </div>
-    </form>
 </div>
 
 </body>

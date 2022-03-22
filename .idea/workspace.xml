@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="Delete Item in API">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" afterDir="false" />
-    </list>
+    <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="fixed login validation" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +13,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="HTML File" />
       </list>
     </option>
@@ -22,12 +21,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="loginValidation" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectId" id="26XCF1WqsrjL9dAcpD4q6OGJI3W" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26WypsGB4RVwk4kViy2WB3MLES4" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -45,14 +48,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Spring Boot.Cst438Project2Application">
     <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
@@ -61,33 +63,19 @@
     <configuration name="Cst438Project2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="CST438_Project2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.cst438_project2.Cst438Project2Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="" />
-          <option name="buildCliOptions" value="" />
-          <option name="command" value="" />
-          <option name="containerName" value="" />
-          <option name="entrypoint" value="" />
-          <option name="commandLineOptions" value="" />
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="HTTP Request.generated-requests | #2" />
       <item itemvalue="Spring Boot.Cst438Project2Application" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #2" />
@@ -125,18 +113,27 @@
       <updated>1647546994935</updated>
     </task>
     <task active="true" id="Default" summary="Default task">
-      <created>1647560436949</created>
+      <changelist id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="User can register and appears in DB&#10;,individual Login/Register pages created" />
+      <created>1647553823084</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1647560436949</updated>
-      <workItem from="1647560438145" duration="1502000" />
+      <updated>1647553823084</updated>
+      <workItem from="1647553824584" duration="1866000" />
+      <workItem from="1647558442521" duration="4045000" />
+      <workItem from="1647620696298" duration="4599000" />
+      <workItem from="1647738940729" duration="11109000" />
+      <workItem from="1647915233109" duration="468000" />
+      <workItem from="1647917634922" duration="521000" />
+      <workItem from="1647918194478" duration="1289000" />
+      <workItem from="1647923617110" duration="774000" />
+      <workItem from="1647925290100" duration="643000" />
     </task>
-    <task id="LOCAL-00005" summary="Delete Item in API">
-      <created>1647740753574</created>
+    <task id="LOCAL-00005" summary="fixed login validation">
+      <created>1647925840715</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1647740753574</updated>
+      <updated>1647925840715</updated>
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
@@ -154,13 +151,14 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="User can register and appears in DB&#10;individual Login/Register pages created" />
     <MESSAGE value="User can register and appears in DB&#10;,individual Login/Register pages created" />
-    <MESSAGE value="Delete Item in API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Item in API" />
+    <MESSAGE value="Login validation is now working. &#10;Added a home page where user is greeted with their name when logging in.&#10;Added logout functionality." />
+    <MESSAGE value="added gitignore because of merging issues" />
+    <MESSAGE value="fixed login validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed login validation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CST438_Project2$Cst438Project2Application.ic" NAME="Cst438Project2Application Coverage Results" MODIFIED="1647387918259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
