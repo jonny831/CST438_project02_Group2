@@ -12,7 +12,21 @@
 
 
 </head>
+
     <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-item nav-link active" href="#" >Home <span class="sr-only"></span></a>
+                    <a class="nav-item nav-link" href="/addItem" >Add Item</a>
+                </div>
+            </div>
+        </nav>
+
         <h1 class="p-5 d-flex justify-content-center">My Wishes</h1>
         <h2 class="d-flex justify-content-center">
             Welcome Home, [[${#request.userPrincipal.principal.name}]] </h2>
@@ -22,8 +36,32 @@
                     Logout
                 </button>
             </form>
-
         </div>
+        <br>
+
+    <div  class = "text-center">
+        <h3>Here are your lists:</h3>
+        <ul>
+            <th:block th:each="list : ${lists}">
+                <li th:text="${list.name}"></li>
+                <!--
+                <a th:href="@{'/editList' + ${list.id}}">
+                    <span>View/Edit</span>
+                </a>
+                -->
+
+
+                <form th:action="@{/editList}">
+                    <input type="hidden" th:name="id" th:value="${list.id}" />
+                    <button type="submit">View/Edit</button>
+                </form>
+
+            </th:block>
+        </ul>
+
+
+
+    </div>
 
 
     </body>

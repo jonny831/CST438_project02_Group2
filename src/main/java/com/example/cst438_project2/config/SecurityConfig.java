@@ -1,6 +1,7 @@
 package com.example.cst438_project2.config;
 
 import com.example.cst438_project2.MyUserDetailService;
+import com.example.cst438_project2.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +21,7 @@ import javax.sql.DataSource;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    DataSource dataSource;
+    private UserRepository userRepo;
 
     @Bean
     public UserDetailsService userDetailsService(){
@@ -34,6 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/home").authenticated()
