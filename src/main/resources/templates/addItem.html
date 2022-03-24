@@ -23,28 +23,33 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ms-auto">
       <a class="nav-item nav-link" href="/home" >Home <span class="sr-only"></span></a>
-      <a class="nav-item nav-link active" href="/addItem" >Add Item</a>
-      <a class="nav-item nav-link" href="/makeList" >Make List</a>
+      <a class="nav-item nav-link" href="/makeList" >Create List</a>
+      <a class="nav-item nav-link" th:href="@{/logout}" >Logout</a>
     </div>
   </div>
 </nav>
 
 <h1 class="p-5 d-flex justify-content-center">Add Item Page</h1>
 
+<h3 class ="text-center">Add item to <th:block th:text="${list.name}"></th:block> </h3>
 <div class="d-flex justify-content-evenly align-items-center">
   <div>
-    <b>Item Name:</b> <input type="text" placeholder="Enter Item Name" name="itemName">
-    <br>
-    <b>Item Price:</b> <input type="text" placeholder="Enter Item Price" name="itemPrice">
-    <br>
-    <b>Item Quantity:</b> <input type="text" placeholder="Enter Item Quantity" name="itemQuantity">
-    <br>
-    <b>Item Image Url:</b> <input type="text" placeholder="Enter Image URL" name="imageUrl">
-    <br>
+    <form th:action="@{/api/addItemToUserList}" method="post">
+      <input type="hidden"  name="email" th:value = "${user.email}">
+      <input type="hidden"  name="listId" th:value = "${list.id}">
+      <b>Item Name:</b> <input type="text" placeholder="Enter Item Name" name="itemName">
+      <br>
+      <b>Item Price:</b> <input type="text" placeholder="Enter Item Price" name="itemPrice">
+      <br>
+      <b>Item Quantity:</b> <input type="text" placeholder="Enter Item Quantity" name="itemQuantity">
+      <br>
+      <b>Item Image Url:</b> <input type="text" placeholder="Enter Image URL" name="imageUrl">
+      <br>
 
-    <button class = "btn btn-primary">
-      Login!
-    </button>
+      <button class = "btn btn-primary">
+        Add Item
+      </button>
+    </form>
   </div>
 </div>
 

@@ -59,6 +59,6 @@ public class MyUserDetails implements UserDetails {
     }
 
     public Integer getUserId(){
-        return user.getUser_id();
+        return user.getId();
     }
 }

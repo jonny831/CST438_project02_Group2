@@ -9,6 +9,8 @@ import java.util.Optional;
 
 public interface UserRepository extends CrudRepository<User,Integer> {
 
+    User findUserById(Integer id);
+
     @Query(value = "SELECT * FROM User u WHERE u.name LIKE %:name%",
             countQuery = "Select count(*) from User",
             nativeQuery = true)

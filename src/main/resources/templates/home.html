@@ -22,15 +22,15 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-item nav-link active" href="/home" >Home <span class="sr-only"></span></a>
-                    <a class="nav-item nav-link" href="/addItem" >Add Item</a>
-                    <a class="nav-item nav-link" href="/makeList" >Make List</a>
+                    <a class="nav-item nav-link" href="/makeList" >Create List</a>
+                    <a class="nav-item nav-link" th:href="@{/logout}" >Logout</a>
                 </div>
             </div>
         </nav>
 
         <h1 class="p-5 d-flex justify-content-center">My Wishes</h1>
         <h2 class="d-flex justify-content-center">
-            Welcome Home, [[${#request.userPrincipal.principal.name}]], email: [[${#request.userPrincipal.principal.username}]]  </h2>
+            Welcome Home, [[${#request.userPrincipal.principal.name}]]</h2>
         <div class="text-center">
             <form th:action="@{/logout}" method="post">
                 <button type="submit" class = "btn btn-danger">

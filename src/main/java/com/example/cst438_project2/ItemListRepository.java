@@ -9,6 +9,7 @@ import java.util.List;
 public interface ItemListRepository extends CrudRepository<ItemList,Integer> {
 
     ItemList findByName(String name);
+    ItemList findItemListById(Integer id);
 
     /*
     @Query("SELECT * FROM ItemList l WHERE l.user_id =?1")

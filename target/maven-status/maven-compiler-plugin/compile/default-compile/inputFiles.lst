@@ -1,8 +1,10 @@
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/ItemList.java
+/Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/MyUserDetailService.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/WishListController.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/ItemListRepository.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/Cst438Project2Application.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/Item.java
+/Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/MyUserDetails.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/User.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/Api.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/ItemRepository.java
@@ -10,4 +12,5 @@
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/config/WebConfig.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/UserRepository.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/FrontEndController.java
+/Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/config/SecurityConfig.java
 /Users/isaimolina/Desktop/CST438_project02_Group2gitmainn22/src/main/java/com/example/cst438_project2/UserList.java

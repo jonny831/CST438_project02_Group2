@@ -24,9 +24,7 @@ public class FrontEndController {
 
     public static final String BASE_URI = "http://localhost:9090/api/";
 
-    // Authenticated User Object
-    //Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-
+    User loggedInUser;
 
     @RequestMapping("/")
     String landingPage(Model model){
@@ -69,10 +67,10 @@ public class FrontEndController {
     @RequestMapping("/home")
     String home(Model model){
         // Authenticated User Object
+
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Integer userId = ((MyUserDetails)principal).getUserId();
-        Optional<User> optionalUser = userRepository.findById(userId);
-        User loggedInUser = optionalUser.get();
+        loggedInUser = userRepository.findUserById(userId);
 
         List<ItemList> listsOfUser = loggedInUser.getItemLists();
 
@@ -81,35 +79,33 @@ public class FrontEndController {
     }
     @RequestMapping(value="/editList", method = RequestMethod.GET)
     String editList(Model model, @RequestParam Integer id) {
-        Optional<ItemList> optionalList = itemListRepository.findById(id);
-        ItemList list = optionalList.get();
-        String listName = list.getName();
+        ItemList list = itemListRepository.findItemListById(id);
         List<Item> items = itemRepository.findItemsByListId(id);
+
         model.addAttribute("items", items);
-        model.addAttribute("listName", listName);
+        model.addAttribute("list", list);
+        model.addAttribute("user",loggedInUser);
 
         return "editList";
     }
 
     @GetMapping("/makeList")
     String createList(Model model){
+        String email = loggedInUser.getEmail();
+        model.addAttribute("email", email);
         return "makeList";
     }
 
-    /*
 
-    @RequestMapping("/addItem")
-    String addItem(Model model){
-        String uri = BASE_URI + "addItem";
-        RestTemplate restTemplate = new RestTemplate();
 
-        Item[] items = restTemplate.getForObject(uri, Item[].class);
-
-        model.addAttribute("items", items);
-
+    @RequestMapping(value="/addItem", method = RequestMethod.GET)
+    String addItem(Model model, @RequestParam Integer id){
+        ItemList list = itemListRepository.findItemListById(id);
+        model.addAttribute("list", list);
+        model.addAttribute("user", loggedInUser);
         return "addItem";
     }
-    */
+
 
 
 }

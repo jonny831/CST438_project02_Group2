@@ -91,36 +91,56 @@ public class Api {
     }
 
     @PostMapping(path = "/addItemList")
-    public @ResponseBody String addItemList(@RequestParam String email, @RequestParam String listName){
+    public String addItemList(@RequestParam String email, @RequestParam String listName){
         ItemList list = new ItemList();
         list.setName(listName);
-        if (userRepository.existsByEmail(email)) {
-            User user1 = userRepository.findByEmail(email);
-            user1.addItemList(list);
-            userRepository.save(user1);
-            return "item list added";
-        } else {
-            return "email not found";
-        }
+
+        User user1 = userRepository.findByEmail(email);
+        user1.addItemList(list);
+        userRepository.save(user1);
+
+        return "redirect:/home";
+
+    }
+    @PostMapping(path = "/deleteItemList")
+    public String deleteItemList(@RequestParam String email, @RequestParam Integer id){
+        User user = userRepository.findByEmail(email);
+        ItemList list = itemListRepository.findItemListById(id);
+        List<ItemList> itemLists = user.getItemLists();
+        itemLists.remove(list);
+        user.setItemLists(itemLists);
+        itemListRepository.delete(list);
+
+        return "redirect:/home";
     }
 
-    @PostMapping(path = "/addItemToItemList")
-    public @ResponseBody String addItemToUserList(@RequestParam String email, @RequestParam String listName, @RequestParam String itemName){
-        User user1 = userRepository.findByEmail(email);
-        ItemList list1 = itemListRepository.findByName(listName);
-        if (itemRepository.existsByName(itemName)) {
-            Item item1 = itemRepository.findByName(itemName);
+    @PostMapping(path = "/addItemToUserList")
+    public String addItemToUserList(@RequestParam String email, @RequestParam Integer listId, @RequestParam String itemName, @RequestParam Double itemPrice, @RequestParam Integer itemQuantity, @RequestParam String imageUrl){
+        User user = userRepository.findByEmail(email);
+        ItemList list = itemListRepository.findItemListById(listId);
+        Item item = new Item();
+        item.setName(itemName);
+        item.setPrice(itemPrice);
+        item.setQuantity(itemQuantity);
+        item.setImgUrl(imageUrl);
+        itemRepository.save(item);
+        list.addItem(item);
+        itemListRepository.save(list);
 
-            list1.addItem(item1);
+        String url = "redirect:/editList?id=" + list.getId();
+        return url;
+    }
 
-            List<ItemList> listOfLists = user1.getItemLists();
+    @PostMapping(path = "/deleteItemFromUserList")
+    public String deleteItemFromUserList(@RequestParam Integer listId, @RequestParam Integer itemId){
+        ItemList list = itemListRepository.findItemListById(listId);
+        Item item = itemRepository.findItemById(itemId);
+        List<Item> items = list.getItems();
+        items.remove(item);
+        list.setItems(items);
+        itemRepository.delete(item);
 
-            if (listOfLists.contains(list1)) {
-                list1.addItem(item1);
-            }
-            userRepository.save(user1);
-            itemListRepository.save(list1);
-        }
-        return "item added to user list";
+        String url = "redirect:/editList?id=" + list.getId();
+        return url;
     }
 }
