@@ -13,19 +13,28 @@
 
 </head>
 <body>
-<h1 class="p-5 d-flex justify-content-center">My Wishes</h1>
+<nav class="navbar justify-content-between">
+    <div>
+        <a href="/"><h1>The Sequel's Wish List</h1></a>
+    </div>
+
+    <div>
+        <a href="/login"><button class="btn btn-dark my-2 my-sm-0">Login</button></a>
+        <a href="/register"><button class="btn btn-dark my-2 my-sm-0">Sign Up</button></a>
+    </div>
+</nav>
 
 <div class="d-flex justify-content-evenly align-items-center">
 
     <div>
         <form action="#" th:action="@{/register}" th:object="${user}" method="post">
-            <span>Don't have an account? Register Here!</span><br><br>
+            <span><b></b>Don't have an account? Register Here!</b></span><br><br>
             <b>Name:</b> <input type="text" th:field="*{name}" placeholder="Enter Name" name="name">
             <br>
             <b>Email:</b> <input type="text" th:field="*{email}" placeholder="Enter Email" name="username">
             <br>
             <b>Password:</b> <input type="password" th:field="*{password}" placeholder="Enter Password" name="password">
-            <br>
+            <br><br>
             <button class = "btn btn-primary">
                 Register
             </button>

@@ -13,12 +13,21 @@
 
 </head>
 <body>
-<h1 class="p-5 d-flex justify-content-center">My Wishes</h1>
+<nav class="navbar justify-content-between">
+    <div>
+        <a href="/"><h1>The Sequel's Wish List</h1></a>
+    </div>
+
+    <div>
+        <a href="/login"><button class="btn btn-dark my-2 my-sm-0">Login</button></a>
+        <a href="/register"><button class="btn btn-dark my-2 my-sm-0">Sign Up</button></a>
+    </div>
+</nav>
 
 <div class="d-flex justify-content-evenly align-items-center">
     <div>
         <form th:action="@{/login}" method="post">
-        <span>Login Here!</span><br><br>
+        <span><b>Login Here!</b></span><br><br>
         <div th:if="${param.error}" class = "alert alert-error>">
             Invalid username and password.
         </div>
@@ -27,9 +36,9 @@
         </div>
 
         <b>Email:</b> <input type="text" placeholder="Enter Email" name="email">
-        <br>
+            <br><br>
         <b>Password:</b> <input type="password" placeholder="Enter Password" name="password">
-        <br>
+            <br><br>
             <button type="submit" class = "btn btn-primary">
                 Login!
             </button>

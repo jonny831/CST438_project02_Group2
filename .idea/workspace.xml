@@ -64,6 +64,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="26WypsGB4RVwk4kViy2WB3MLES4" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -101,6 +104,18 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="HTTP Request.generated-requests | #2" />
@@ -156,6 +171,8 @@
       <workItem from="1647558442521" duration="4045000" />
       <workItem from="1647620696298" duration="4599000" />
       <workItem from="1647738940729" duration="11109000" />
+      <workItem from="1647892931750" duration="705000" />
+      <workItem from="1647993095879" duration="2361000" />
       <workItem from="1647915233109" duration="468000" />
       <workItem from="1647917634922" duration="521000" />
       <workItem from="1647918194478" duration="1289000" />
@@ -213,6 +230,7 @@
     <MESSAGE value="User can register and appears in DB&#10;individual Login/Register pages created" />
     <MESSAGE value="User can register and appears in DB&#10;,individual Login/Register pages created" />
     <MESSAGE value="Login validation is now working. &#10;Added a home page where user is greeted with their name when logging in.&#10;Added logout functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Login validation is now working. &#10;Added a home page where user is greeted with their name when logging in.&#10;Added logout functionality." />
     <MESSAGE value="added gitignore because of merging issues" />
     <MESSAGE value="fixed login validation" />
     <MESSAGE value="showing user lists on home page" />
@@ -220,5 +238,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CST438_Project2$Cst438Project2Application.ic" NAME="Cst438Project2Application Coverage Results" MODIFIED="1647387918259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/proj2$Cst438Project2Application.ic" NAME="Cst438Project2Application Coverage Results" MODIFIED="1647729244117" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
