@@ -50,11 +50,15 @@ public class MyUserDetails implements UserDetails {
         return true;
     }
 
+    public User getUser(){
+        return this.user;
+    }
+
     public String getName(){
         return user.getName();
     }
 
-    public Integer getId(){
+    public Integer getUserId(){
         return user.getId();
     }
 }

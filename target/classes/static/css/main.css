@@ -5,8 +5,16 @@ body{
 h1{
     text-align: center;
 }
-nav{
-    background-color: peachpuff;
-    margin: 40px;
-    padding: 20px;
+
+.navbar.center .navbar-inner {
+    text-align: center;
+}
+
+.navbar.center .navbar-inner .nav {
+    display:inline-block;
+    float: none;
+}
+td, th{
+    border: 2px solid black;
+    padding: 15px;
 }

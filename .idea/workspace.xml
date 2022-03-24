@@ -4,16 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="User can register and appears in DB&#10;,individual Login/Register pages created">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="showing user lists on home page">
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/makeList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/FrontEndController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/FrontEndController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/MyUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addItem.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addItem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/makeList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/makeList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CST438_Project2-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/CST438_Project2-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CST438_Project2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/CST438_Project2-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemListRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemListRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/MyUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/MyUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/addItem.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addItem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.cst438_project2.Cst438Project2ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.example.cst438_project2.Cst438Project2ApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.example.cst438_project2.Cst438Project2ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.example.cst438_project2.Cst438Project2ApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +47,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
         <option value="HTML File" />
       </list>
     </option>
@@ -31,7 +55,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="loginValidation" />
+        <entry key="$PROJECT_DIR$" value="showUserLists" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -153,7 +177,9 @@
       <workItem from="1647917634922" duration="521000" />
       <workItem from="1647918194478" duration="1289000" />
       <workItem from="1647923617110" duration="774000" />
-      <workItem from="1647925290100" duration="643000" />
+      <workItem from="1647925290100" duration="971000" />
+      <workItem from="1647978145313" duration="35001000" />
+      <workItem from="1648064694353" duration="42738000" />
     </task>
     <task id="LOCAL-00005" summary="fixed login validation">
       <created>1647925840715</created>
@@ -162,7 +188,28 @@
       <option name="project" value="LOCAL" />
       <updated>1647925840715</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00006" summary="fixed login validation">
+      <created>1647926185525</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647926185525</updated>
+    </task>
+    <task id="LOCAL-00007" summary="showing user lists on home page">
+      <created>1648084593885</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648084593885</updated>
+    </task>
+    <task id="LOCAL-00008" summary="showing user lists on home page">
+      <created>1648089030678</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648089030678</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +233,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="Login validation is now working. &#10;Added a home page where user is greeted with their name when logging in.&#10;Added logout functionality." />
     <MESSAGE value="added gitignore because of merging issues" />
     <MESSAGE value="fixed login validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed login validation" />
+    <MESSAGE value="showing user lists on home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="showing user lists on home page" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CST438_Project2$Cst438Project2Application.ic" NAME="Cst438Project2Application Coverage Results" MODIFIED="1647387918259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

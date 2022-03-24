@@ -1,9 +1,6 @@
 package com.example.cst438_project2;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Item {
@@ -11,10 +8,12 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private Integer listId;
     private String name;
     private Double price;
     private Integer quantity;
+    private  String imgUrl;
+
+
 
     public Integer getId() {
         return id;
@@ -24,13 +23,7 @@ public class Item {
         this.id = id;
     }
 
-    public Integer getListId() {
-        return listId;
-    }
 
-    public void setListId(Integer listId) {
-        this.listId = listId;
-    }
 
     public String getName() {
         return name;
@@ -54,5 +47,14 @@ public class Item {
 
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
+    }
+
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

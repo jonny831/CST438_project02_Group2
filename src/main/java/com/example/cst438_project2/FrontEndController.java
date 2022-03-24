@@ -1,19 +1,30 @@
 package com.example.cst438_project2;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class FrontEndController {
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private ItemListRepository itemListRepository;
+    @Autowired
+    private ItemRepository itemRepository;
+
+
+
+
     public static final String BASE_URI = "http://localhost:9090/api/";
+
+    User loggedInUser;
 
     @RequestMapping("/")
     String landingPage(Model model){
@@ -47,6 +58,7 @@ public class FrontEndController {
 
         User[] users = restTemplate.getForObject(uri, User[].class);
 
+
         model.addAttribute("users", users);
 
         return "allUsers";
@@ -54,19 +66,46 @@ public class FrontEndController {
 
     @RequestMapping("/home")
     String home(Model model){
+        // Authenticated User Object
+
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Integer userId = ((MyUserDetails)principal).getUserId();
+        loggedInUser = userRepository.findUserById(userId);
+
+        List<ItemList> listsOfUser = loggedInUser.getItemLists();
+
+        model.addAttribute("lists", listsOfUser);
         return "home";
     }
-
-    @RequestMapping("/addItem")
-    String addItem(Model model){
-        String uri = BASE_URI + "addItem";
-        RestTemplate restTemplate = new RestTemplate();
-
-        Item[] items = restTemplate.getForObject(uri, Item[].class);
+    @RequestMapping(value="/editList", method = RequestMethod.GET)
+    String editList(Model model, @RequestParam Integer id) {
+        ItemList list = itemListRepository.findItemListById(id);
+        List<Item> items = itemRepository.findItemsByListId(id);
 
         model.addAttribute("items", items);
+        model.addAttribute("list", list);
+        model.addAttribute("user",loggedInUser);
 
+        return "editList";
+    }
+
+    @GetMapping("/makeList")
+    String createList(Model model){
+        String email = loggedInUser.getEmail();
+        model.addAttribute("email", email);
+        return "makeList";
+    }
+
+
+
+    @RequestMapping(value="/addItem", method = RequestMethod.GET)
+    String addItem(Model model, @RequestParam Integer id){
+        ItemList list = itemListRepository.findItemListById(id);
+        model.addAttribute("list", list);
+        model.addAttribute("user", loggedInUser);
         return "addItem";
     }
+
+
 
 }
