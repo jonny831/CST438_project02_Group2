@@ -13,3 +13,7 @@ h1{
     display:inline-block;
     float: none;
 }
+td, th{
+    border: 2px solid black;
+    padding: 15px;
+}

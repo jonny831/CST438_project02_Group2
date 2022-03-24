@@ -21,8 +21,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-            <a class="nav-item nav-link active" href="#" >Home <span class="sr-only"></span></a>
+            <a class="nav-item nav-link" href="/home" >Home <span class="sr-only"></span></a>
             <a class="nav-item nav-link" href="/addItem" >Add Item</a>
+            <a class="nav-item nav-link" href="/makeList" >Make List</a>
         </div>
     </div>
 </nav>
@@ -34,16 +35,20 @@
 <div  class = "text-center">
     <h3>Here are the items from <th:block th:text="${listName}"></th:block> </h3>
 
-    <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+    <table style="border:4px solid black;margin-left:auto;margin-right:auto; padding:15px">
         <tr>
             <th>Name</th>
             <th>Price</th>
-            <th>Last Name</th>
+            <th>Quantity</th>
+            <th>Image</th>
         </tr>
         <tr th:each="item : ${items}">
             <td th:text="${item.name}">Name</td>
             <td th:text="${item.price}">Price</td>
             <td th:text="${item.quantity}">Quantity</td>
+            <td> <img width="200" height="200"  th:src="${item.imgUrl}"></td>
+
+
   <!--
             <td>
                 <form th:action="@{/users/doDelete/}" th:object="${customer}" method="post">

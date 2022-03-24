@@ -5,38 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de176c96-f571-4d13-8524-337fc66127b5" name="Changes" comment="showing user lists on home page">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/editList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Api.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/FrontEndController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/FrontEndController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/MyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/MyUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/cst438_project2/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addItem.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addItem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Api.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/FrontEndController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemListRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemListRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/ItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/MyUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/MyUserDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/UserList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/UserList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/cst438_project2/config/SecurityConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +140,7 @@
       <workItem from="1647923617110" duration="774000" />
       <workItem from="1647925290100" duration="971000" />
       <workItem from="1647978145313" duration="35001000" />
-      <workItem from="1648064694353" duration="19011000" />
+      <workItem from="1648064694353" duration="23323000" />
     </task>
     <task id="LOCAL-00005" summary="fixed login validation">
       <created>1647925840715</created>
@@ -178,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647926185525</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="showing user lists on home page">
+      <created>1648084593885</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648084593885</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
