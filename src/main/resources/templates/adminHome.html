@@ -12,33 +12,56 @@
 
 
 </head>
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-            <a class="nav-item nav-link" href="/home" >Home <span class="sr-only"></span></a>
+            <a class="nav-item nav-link active" href="/home" >Home <span class="sr-only"></span></a>
             <a class="nav-item nav-link" href="/makeList" >Create List</a>
             <a class="nav-item nav-link" th:href="@{/logout}" >Logout</a>
         </div>
     </div>
 </nav>
-    <ul>
 
-            <th:block th:each="user : ${users}">
-                <li th:text="${'Name: ' + user.name}">..</li>
-                <li th:text="${'Email: ' + user.email}">..</li>
-                <form th:action="@{/api/deleteUser}" method="post">
-                    <input type="hidden" th:name="userId" th:value="${user.id}" />
-                    <button class ="btn btn-danger"type="submit">Delete User</button>
-                </form>
-                <br>
-            </th:block>
+<h1 class="p-5 d-flex justify-content-center">My Wishes</h1>
+<h2 class="d-flex justify-content-center">
+    Welcome Home, [[${#request.userPrincipal.principal.name}]]</h2>
+<div class="text-center">
+    <form th:action="@{/api/allUsers}">
+        <button type="submit" class = "btn btn-outline-success">
+            View All Users
+        </button>
+    </form>
+</div>
+<br>
 
-    </ul>
+<div  class = "text-center">
+    <h3>Here are your lists:</h3>
+
+    <th:block th:each="list : ${lists}">
+        <li th:text="${list.name}"></li>
+        <!--
+        <a th:href="@{'/editList' + ${list.id}}">
+            <span>View/Edit</span>
+        </a>
+        -->
+
+        <form th:action="@{/editList}">
+            <input type="hidden" th:name="id" th:value="${list.id}" />
+            <button type="submit">View/Edit</button>
+        </form>
+
+    </th:block>
+
+
+
+
+</div>
+
 
 </body>
 </html>

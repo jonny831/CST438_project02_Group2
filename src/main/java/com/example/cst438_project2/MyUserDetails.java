@@ -1,8 +1,10 @@
 package com.example.cst438_project2;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -17,7 +19,9 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        List<GrantedAuthority> grantedAuthorities=new ArrayList<GrantedAuthority>();
+        grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_"+this.user.getRole().toUpperCase()));
+        return grantedAuthorities;
     }
 
     @Override
@@ -61,4 +65,6 @@ public class MyUserDetails implements UserDetails {
     public Integer getUserId(){
         return user.getId();
     }
+
+
 }
