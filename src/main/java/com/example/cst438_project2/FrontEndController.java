@@ -1,10 +1,12 @@
 package com.example.cst438_project2;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -18,11 +20,6 @@ public class FrontEndController {
     private ItemListRepository itemListRepository;
     @Autowired
     private ItemRepository itemRepository;
-
-
-
-
-    public static final String BASE_URI = "http://localhost:9090/api/";
 
     User loggedInUser;
 
@@ -40,6 +37,7 @@ public class FrontEndController {
     }
     @PostMapping("/register")
     String registerSubmit(@ModelAttribute("user") User user){
+        user.setRole("USER");
         userRepository.save(user);
 
         return"index";
@@ -51,19 +49,6 @@ public class FrontEndController {
     }
 
 
-    @RequestMapping("/allUsers")
-    String allUsers(Model model){
-        String uri = BASE_URI + "allUsers";
-        RestTemplate restTemplate = new RestTemplate();
-
-        User[] users = restTemplate.getForObject(uri, User[].class);
-
-
-        model.addAttribute("users", users);
-
-        return "allUsers";
-    }
-
     @RequestMapping("/home")
     String home(Model model){
         // Authenticated User Object
@@ -73,8 +58,10 @@ public class FrontEndController {
         loggedInUser = userRepository.findUserById(userId);
 
         List<ItemList> listsOfUser = loggedInUser.getItemLists();
-
         model.addAttribute("lists", listsOfUser);
+        if(loggedInUser.getRole().equals("ADMIN")){
+            return "adminHome";
+        }
         return "home";
     }
     @RequestMapping(value="/editList", method = RequestMethod.GET)
